@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-black: #05060A;
+  --color-space-deep: #0A0D14;
+  --color-space-card: #111520;
+  --color-space-surface: #1A1F2E;
+  --color-violet: #6C63FF;
+  --color-violet-glow: #6C63FF33;
+  --color-cyan: #00D4FF;
+  --color-cyan-glow: #00D4FF33;
+  --color-coral: #FF6B6B;
+  --color-gold: #FFD166;
+  --color-nebula-white: #E8EAF0;
+  --color-lavender: #7A7F9A;
+  --color-glass: #ffffff08;
+  --color-glass-border: #ffffff15;
+
+  --font-syne: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-serif: 'Instrument Serif', serif;
+}
+
+/* ---- Base Styles ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #05060A;
+  color: #E8EAF0;
+  font-family: 'DM Mono', monospace;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::selection {
+  background: #6C63FF;
+  color: #E8EAF0;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6C63FF;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D4FF;
+}
+
+/* ---- Utility Classes ---- */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-violet {
+  box-shadow: 0 0 20px #6C63FF33, 0 0 40px #6C63FF11;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px #00D4FF33, 0 0 40px #00D4FF11;
+}
+
+.glow-text-violet {
+  text-shadow: 0 0 20px #6C63FF66, 0 0 40px #6C63FF33;
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 20px #00D4FF66, 0 0 40px #00D4FF33;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6C63FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #FF6B6B, #FFD166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Animations ---- */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Admin Styles */
+.admin-sidebar {
+  background: linear-gradient(180deg, #0A0D14 0%, #111520 100%);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body {
+    cursor: auto;
+  }
+}

@@ -1,0 +1,92 @@
+export const projects = [
+    {
+        id: '1',
+        title: 'AI Chat Application',
+        slug: 'ai-chat-app',
+        short_desc: 'Real-time AI-powered chat application with natural language processing',
+        long_desc: `## Overview\nA sophisticated chat application that leverages cutting-edge AI models to provide intelligent, context-aware conversations.\n\n## Key Features\n- Real-time messaging with WebSocket integration\n- AI-powered response generation\n- Multi-language support\n- Dark/Light theme toggle\n\n## Technical Challenges\nImplementing streaming responses while maintaining conversation context was the biggest challenge. We used a custom state management solution to handle the conversation tree efficiently.`,
+        thumbnail_url: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+        images: [
+            'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop',
+            'https://images.unsplash.com/photo-1684163761883-8decf27b4649?w=800&h=500&fit=crop'
+        ],
+        tech_tags: ['React', 'Node.js', 'OpenAI', 'WebSocket', 'Tailwind CSS'],
+        category: 'Full Stack',
+        github_url: 'https://github.com',
+        live_url: 'https://example.com',
+        featured: true,
+        status: 'live',
+        order_index: 1,
+        created_at: '2025-12-01'
+    },
+    {
+        id: '2',
+        title: 'E-Commerce Platform',
+        slug: 'ecommerce-platform',
+        short_desc: 'Full-featured e-commerce platform with payment processing and inventory management',
+        long_desc: `## Overview\nA complete e-commerce solution built from scratch, featuring product management, cart functionality, and secure payment processing.\n\n## Key Features\n- Product catalog with advanced filtering\n- Shopping cart with persistent sessions\n- Stripe payment integration\n- Admin dashboard for inventory management\n\n## Technical Challenges\nHandling concurrent inventory updates during flash sales required implementing optimistic locking at the database level.`,
+        thumbnail_url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+        images: [
+            'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop'
+        ],
+        tech_tags: ['Next.js', 'PostgreSQL', 'Stripe', 'Prisma', 'Tailwind CSS'],
+        category: 'Full Stack',
+        github_url: 'https://github.com',
+        live_url: 'https://example.com',
+        featured: true,
+        status: 'live',
+        order_index: 2,
+        created_at: '2025-10-15'
+    },
+    {
+        id: '3',
+        title: 'Weather Dashboard',
+        slug: 'weather-dashboard',
+        short_desc: 'Beautiful weather dashboard with interactive maps and 7-day forecasts',
+        long_desc: `## Overview\nAn elegant weather application that provides detailed forecasts, interactive radar maps, and historical weather data.\n\n## Key Features\n- Real-time weather data from OpenWeather API\n- Interactive radar and satellite maps\n- 7-day and hourly forecasts\n- Location-based automatic detection\n\n## Technical Challenges\nOptimizing the map rendering with thousands of data points required implementing WebGL-based custom layers.`,
+        thumbnail_url: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop',
+        images: [],
+        tech_tags: ['React', 'D3.js', 'Mapbox', 'OpenWeather API'],
+        category: 'Frontend',
+        github_url: 'https://github.com',
+        live_url: 'https://example.com',
+        featured: true,
+        status: 'live',
+        order_index: 3,
+        created_at: '2025-08-20'
+    },
+    {
+        id: '4',
+        title: 'Task Management CLI',
+        slug: 'task-management-cli',
+        short_desc: 'Powerful command-line task manager with priority queues and deadline tracking',
+        long_desc: `## Overview\nA fast, efficient CLI tool for managing tasks directly from the terminal.\n\n## Key Features\n- Priority-based task queue\n- Deadline tracking with notifications\n- Project grouping and tagging\n- Export to JSON/CSV`,
+        thumbnail_url: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&h=400&fit=crop',
+        images: [],
+        tech_tags: ['Python', 'Click', 'SQLite', 'Rich'],
+        category: 'Backend',
+        github_url: 'https://github.com',
+        live_url: '',
+        featured: false,
+        status: 'live',
+        order_index: 4,
+        created_at: '2025-06-10'
+    },
+    {
+        id: '5',
+        title: 'Portfolio Website',
+        slug: 'portfolio-website',
+        short_desc: 'This very portfolio — anti-gravity 3D design with Supabase backend',
+        long_desc: `## Overview\nA high-impact personal portfolio with anti-gravity 3D visual effects, built with React, Three.js, and Supabase.\n\n## Key Features\n- Anti-gravity 3D floating scenes\n- Magnetic cursor with gravity effects\n- Admin dashboard for content management\n- Real-time contact form`,
+        thumbnail_url: 'https://images.unsplash.com/photo-1545665277-5b77b6bbe2e1?w=600&h=400&fit=crop',
+        images: [],
+        tech_tags: ['React', 'Three.js', 'Supabase', 'Framer Motion', 'GSAP'],
+        category: 'Full Stack',
+        github_url: 'https://github.com',
+        live_url: 'https://example.com',
+        featured: false,
+        status: 'live',
+        order_index: 5,
+        created_at: '2026-03-01'
+    }
+]
